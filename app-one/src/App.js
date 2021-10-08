@@ -1,13 +1,14 @@
 import './App.css';
+import Greets from './Greets';
+
 
 function App() {
 
-  const Greet = ({name="Max"}) => <h1>{"Hello "+name}</h1>
-
   return (
     <div className="App">
-     <Greet name="Jan"/>
-     <Greet/>
+      <Greets name="Jan" />
+      <Greets name="Lea" />
+      <Greets name="Lilly" />
     </div>
   );
 }
