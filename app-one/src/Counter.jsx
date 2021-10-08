@@ -26,13 +26,13 @@ const Counter = ({ count, id, name, onChangeCounter }) => {
           <h3>{name}</h3>
           <p>{count}</p>
           <button
-            className={count <= counterSettings.min && "opacity30"}
+            className={count <= counterSettings.min ? "opacity30" : null}
             onClick={decremetCounter}
           >
             -
           </button>
           <button
-            className={count >= counterSettings.max && "opacity30"}
+            className={count >= counterSettings.max ? "opacity30" : null}
             onClick={incremetCounter}
           >
             +

@@ -15,8 +15,6 @@ function App() {
 
   const handelCounterChange = (counter) => {
     setcounterList(prevCounterList => prevCounterList.map(c => {
-      console.log('Counter:', counter);
-      console.log('C:', c);
       if (c.id === counter.id) return counter;
       return c;
     }))
