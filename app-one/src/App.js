@@ -5,10 +5,10 @@ import CounterList from './componentes/Couter/CounterList'
 
 const App = () => {
     return (
-        <div>
+        <>
           <Greets name="Max"/>
           <CounterList/> 
-        </div>
+        </>
     )
 }
 export default App
