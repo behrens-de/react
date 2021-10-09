@@ -32,7 +32,10 @@ function CounterList() {
 
   return (
     <>
+    <h3 className="h3-counter-list">Counter Liste</h3>
+    <div className="counter-list">
       {counterListMap}
+    </div>
     </>
   )
 }

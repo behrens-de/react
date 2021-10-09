@@ -6,7 +6,7 @@ import CounterList from './componentes/Couter/CounterList'
 const App = () => {
     return (
         <div>
-          <Greets name="Papalone"/>
+          <Greets name="Max"/>
           <CounterList/> 
         </div>
     )

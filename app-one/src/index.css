@@ -62,3 +62,37 @@ code {
 .opacity30{
   opacity: .3;
 }
+
+
+.h3-counter-list{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(0,0,0,.5);
+}
+
+.counter-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+
+.greets{
+  width: 100%;
+  background: rgba(0,0,0,.5);
+}
+
+.greets h1{
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+  color: #eee;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+  font-size: 2rem;
+  font-weight: 300;
+}

@@ -14,7 +14,7 @@ const greeting = ({name}) => {
 
 const Greets = ({name}) => {
     return (
-        <div>
+        <div class="greets">
           <h1>{greeting({name})}</h1>  
         </div>
     )
