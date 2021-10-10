@@ -21,7 +21,7 @@ const Counter = ({ count, id, name, onChangeCounter }) => {
 
   return (
     <div>
-      <div className="counter">
+      <div className="App">
         <div className="small-counter">
           <h3>{name}</h3>
           <p>{count}</p>

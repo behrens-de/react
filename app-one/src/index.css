@@ -96,3 +96,12 @@ code {
   font-size: 2rem;
   font-weight: 300;
 }
+
+
+input{
+  outline: none;
+}
+
+a{
+  text-decoration: none;
+}

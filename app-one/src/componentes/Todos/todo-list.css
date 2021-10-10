@@ -85,7 +85,7 @@ body{
   border-radius: .25rem;
 }
 
-.todo-item span{
+.todo-item label{
   padding: .5rem;
   flex-grow: 1;
 }
