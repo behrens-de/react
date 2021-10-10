@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid'
 
 
 import './todo-list.css';
-import Todoitem from './componentes/Todoitem.jsx'
+import Todolist from './componentes/Todolist'
 
 
 const App = () => {
@@ -78,29 +78,22 @@ const App = () => {
 
       <main className="todo-main">
 
-        <h2>Offene Aufgaben</h2>
 
-        {activTodos.map(todo => (
-          <Todoitem
-            id={todo.id}
-            done={todo.done}
-            title={todo.title}
-            onToggleTodo={toogleTodo}
-            onDeleteTodo={handleTodoDelete}
-          />
 
-        ))}
 
-        <h2>Erledigte Aufgaben</h2>
-        {inactivTodos.map(todo => (
-          <Todoitem
-            id={todo.id}
-            done={todo.done}
-            title={todo.title}
-            onToggleTodo={toogleTodo}
-            onDeleteTodo={handleTodoDelete}
-          />
-        ))}
+        <Todolist
+          headline="Offene Aufgaben"
+          list={activTodos}
+          onToggleTodo={toogleTodo}
+          onDeleteTodo={handleTodoDelete}
+        />
+
+        <Todolist
+          headline="Erledigte Aufgaben"
+          list={inactivTodos}
+          onToggleTodo={toogleTodo}
+          onDeleteTodo={handleTodoDelete}
+        />
       </main>
     </>
   )

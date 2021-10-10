@@ -8,7 +8,7 @@ const Todoitem = ({ id, done, title , onToggleTodo, onDeleteTodo}) => {
             onToggleTodo(id);
         }}
         type="checkbox"
-        name=""
+        checked={done}
       />
       <span>{title}</span>
       <button onClick={() => onDeleteTodo(id)}>löschen</button>
