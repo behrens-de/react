@@ -1,5 +1,10 @@
 import React, { useState } from 'react'
+import { v4 as uuid } from 'uuid'
+
+
 import './todo-list.css';
+import Todoitem from './componentes/Todoitem.jsx'
+
 
 const App = () => {
 
@@ -25,8 +30,8 @@ const App = () => {
       event.preventDefault();
       // Neue ToDo erstellen
       let newTodo = {
-        id: (todos.length + 1), 
-        title: event.target.value, 
+        id: uuid(),
+        title: event.target.value,
         done: false
       }
       // Setzen der ToDos
@@ -36,6 +41,24 @@ const App = () => {
     }
   }
 
+  // Todos Entfernen 
+  const handleTodoDelete = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
+
+
+  const toogleTodo = (id) => {
+    setTodos(todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, done: !todo.done }
+      }
+      return todo;
+    }))
+  }
+
+
+  const activTodos = todos.filter(({ done }) => !done);
+  const inactivTodos = todos.filter(({ done }) => done);
 
   return (
     <>
@@ -57,20 +80,27 @@ const App = () => {
 
         <h2>Offene Aufgaben</h2>
 
-        {todos.map(todo => (
-          <div className="todo-item">
-            <input type="checkbox" name="" />
-            <span>{todo.title}</span>
-            <button>löschen</button>
-          </div>
+        {activTodos.map(todo => (
+          <Todoitem
+            id={todo.id}
+            done={todo.done}
+            title={todo.title}
+            onToggleTodo={toogleTodo}
+            onDeleteTodo={handleTodoDelete}
+          />
 
         ))}
 
-
-
-
         <h2>Erledigte Aufgaben</h2>
-
+        {inactivTodos.map(todo => (
+          <Todoitem
+            id={todo.id}
+            done={todo.done}
+            title={todo.title}
+            onToggleTodo={toogleTodo}
+            onDeleteTodo={handleTodoDelete}
+          />
+        ))}
       </main>
     </>
   )
