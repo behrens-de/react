@@ -18,11 +18,23 @@ const App = () => {
   ]);
 
   // Funtion um ToDo hinzu zu fügen
-const handleAddTodo = (e) => {
-  e.preventDefault();
-  alert('test');
+  const handleAddTodo = (event) => {
 
-}
+    if (event.key === "Enter") {
+      // Ursprungs Event entfernen
+      event.preventDefault();
+      // Neue ToDo erstellen
+      let newTodo = {
+        id: (todos.length + 1), 
+        title: event.target.value, 
+        done: false
+      }
+      // Setzen der ToDos
+      setTodos([...todos, newTodo]);
+      // Input wieder leeren
+      event.target.value = '';
+    }
+  }
 
 
   return (
@@ -32,12 +44,13 @@ const handleAddTodo = (e) => {
           Todo Liste
         </h1>
         <form className="todo-search">
-          <input onKeyDown={handleAddTodo} type="search" placeholder="Suche..." />
+          <input type="search" placeholder="Suche..." />
         </form>
       </header>
 
       <form className="add-todo">
-        <input type="text" name="new-todo" /><button>add</button>
+        <input onKeyDown={handleAddTodo} type="text" name="new-todo" />
+        <button>add</button>
       </form>
 
       <main className="todo-main">
