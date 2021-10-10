@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #eee;
+}
+.todo-header{
+  background: rgb(101, 186, 231);;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-brandname{
+  font-size: 1.5rem;
+  margin: 1rem;
+  font-weight: 300;
+  color: rgba(0,0,0,.5);
+}
+
+.todo-search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.todo-search input{
+  min-height: 50%;
+  border: none;
+  background: #fff;
+  padding: 0 1rem;
+  border-radius: .25rem;
+  box-shadow: 0 0 0 1px rgb(30, 127, 179);
+}
+
+
+.add-todo{
+  width: 100%;
+  background: rgb(228, 246, 255);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+.add-todo input{
+  border: none;
+  background: #fff;
+  padding: 0 1rem;
+  height: 30px;
+  border-radius: .25rem 0 0 .25rem;
+  box-shadow: 0 0 0 1px rgb(30, 127, 179);
+}
+
+.add-todo button{
+  border: none;
+  background: rgb(30, 127, 179);
+  padding: 0 1rem;
+  height: 30px;
+  border-radius: 0 .25rem .25rem 0;
+  color: #fff;
+  box-shadow: 0 0 0 1px rgb(30, 127, 179);
+}
+
+
+.todo-main h2{
+  font-size: 1.2rem;
+  margin: 1rem;
+  font-weight: 300;
+  color: rgba(0,0,0,.5);
+  display: block;
+  text-align: center;
+}
+
+/**/
+
+.todo-item{
+  width: calc(100% -2rem);
+  margin: .5rem 1rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 .5rem;
+  border-radius: .25rem;
+}
+
+.todo-item span{
+  padding: .5rem;
+  flex-grow: 1;
+}
+
+.todo-item button{
+  background: rgb(255, 104, 104);
+  border: none;
+  font-size: 80%;
+  padding: .25rem;
+  border-radius: .25rem;
+  color: #fff;
+}
