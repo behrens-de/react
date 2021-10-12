@@ -1,0 +1,7 @@
+Was wir brauchen!
+
+1) wir müssen Listen (Collections) anlegen können
+2) wir müssen Itmes in einer Liste(1) Hinzufügen können
+3) wir müssen die Items bearbeiten können
+3.1) Items löschen
+3.2) Items ändern (Name, Liste)
